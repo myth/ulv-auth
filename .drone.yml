@@ -7,7 +7,7 @@ pipeline:
     image: lushdigital/docker-golang-dep
     commands:
       - cd /go/src/github.com/myth/ulv-auth
-      - dep ensure
+      - /go/bin/dep ensure
       - go get -u golang.org/x/tools/cmd/cover
       - go test -cover $(go list ./... | grep -v /vendor/)
 
