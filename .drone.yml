@@ -6,11 +6,11 @@ pipeline:
   test:
     image: lushdigital/docker-golang-dep
     commands:
-      - cd /go/src/github.com/myth/ulv-auth
       - go get -u github.com/golang/dep/cmd/dep
       - find / -name 'dep'
-      - /go/bin/dep ensure
       - go get -u golang.org/x/tools/cmd/cover
+      - cd /go/src/github.com/myth/ulv-auth
+      - /go/bin/dep ensure
       - go test -cover $(go list ./... | grep -v /vendor/)
 
   build:
