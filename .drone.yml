@@ -4,8 +4,9 @@ workspace:
 
 pipeline:
   test:
-    image: golang:1.8
+    image: lushdigital/docker-golang-dep
     commands:
+      - dep ensure
       - go get -u golang.org/x/tools/cmd/cover
       - go test -cover $(go list ./... | grep -v /vendor/)
 
