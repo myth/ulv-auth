@@ -7,15 +7,15 @@ pipeline:
     image: lushdigital/docker-golang-dep
     commands:
       - go get -u github.com/golang/dep/cmd/dep
-      - find / -name 'dep'
       - go get -u golang.org/x/tools/cmd/cover
       - cd /go/src/github.com/myth/ulv-auth
       - /go/bin/dep ensure
       - go test -cover $(go list ./... | grep -v /vendor/)
 
   build:
-    image: golang:1.8
+    image: lushdigital/docker-golang-dep
     commands:
+      - /go/bin/dep ensure
       - go build
     when:
       event: [ push, tag ]
@@ -24,7 +24,7 @@ pipeline:
     image: plugins/ssh
     when:
       branch: master
-      event: push
+      event: deployment
     host: ace.ulv.io
     port: 22
     username: root
