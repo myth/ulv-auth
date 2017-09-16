@@ -24,12 +24,12 @@ pipeline:
     image: plugins/ssh
     when:
       branch: master
-      event: deployment
+      event: push
     host: ace.ulv.io
     port: 22
     username: root
     secrets: [ ssh_key ]
     script:
-      - systemctl status ulv-auth
+      - echo systemctl status ulv-auth
       - echo Change this to restart later
 
