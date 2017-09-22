@@ -4,8 +4,20 @@
 [[projects]]
   name = "github.com/asaskevich/govalidator"
   packages = ["."]
-  revision = "4918b99a7cb949bb295f3c7bbaf24b577d806e35"
-  version = "v6"
+  revision = "73945b6115bfbbcc57d89b7316e28109364124e1"
+  version = "v7"
+
+[[projects]]
+  name = "github.com/dgrijalva/jwt-go"
+  packages = ["."]
+  revision = "d2709f9f1f31ebcda9651b03077758c1f3a0018c"
+  version = "v3.0.0"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/golang/protobuf"
+  packages = ["proto"]
+  revision = "130e6b02ab059e7b717a096f397c5b60111cae74"
 
 [[projects]]
   branch = "master"
@@ -14,10 +26,28 @@
   revision = "491d3605edfb866af34a48075bd4355ac1bf46ca"
 
 [[projects]]
-  name = "github.com/ory/fosite"
+  branch = "master"
+  name = "github.com/moul/http2curl"
   packages = ["."]
+  revision = "9ac6cf4d929b2fa8fd2d2e6dec5bb0feb4f4911d"
+
+[[projects]]
+  name = "github.com/ory/fosite"
+  packages = [".","compose","handler/oauth2","handler/openid","storage","token/hmac","token/jwt"]
   revision = "461b38fd07e47dad709667f024e98a71bfd3792b"
   version = "v0.11.3"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/ory/fosite-example"
+  packages = ["oauth2client","resourceserver"]
+  revision = "5a69d0bb3f76df10b1fc039400b5065869a1a772"
+
+[[projects]]
+  name = "github.com/parnurzeal/gorequest"
+  packages = ["."]
+  revision = "a578a48e8d6ca8b01a3b18314c43c6716bb5f5a3"
+  version = "v0.2.15"
 
 [[projects]]
   name = "github.com/pborman/uuid"
@@ -41,11 +71,35 @@
   branch = "master"
   name = "golang.org/x/crypto"
   packages = ["bcrypt","blowfish"]
-  revision = "81e90905daefcd6fd217b62423c0908922eadb30"
+  revision = "7d9177d70076375b9a59c8fde23d52d9c4a7ecd5"
+
+[[projects]]
+  branch = "master"
+  name = "golang.org/x/net"
+  packages = ["context","context/ctxhttp","idna","publicsuffix"]
+  revision = "0744d001aa8470aaa53df28d32e5ceeb8af9bd70"
+
+[[projects]]
+  branch = "master"
+  name = "golang.org/x/oauth2"
+  packages = [".","clientcredentials","internal"]
+  revision = "13449ad91cb26cb47661c1b080790392170385fd"
+
+[[projects]]
+  branch = "master"
+  name = "golang.org/x/text"
+  packages = ["collate","collate/build","internal/colltab","internal/gen","internal/tag","internal/triegen","internal/ucd","language","secure/bidirule","transform","unicode/bidi","unicode/cldr","unicode/norm","unicode/rangetable"]
+  revision = "1cbadb444a806fd9430d14ad08967ed91da4fa0a"
+
+[[projects]]
+  name = "google.golang.org/appengine"
+  packages = ["internal","internal/base","internal/datastore","internal/log","internal/remote_api","internal/urlfetch","urlfetch"]
+  revision = "150dc57a1b433e64154302bdc40b6bb8aefa313a"
+  version = "v1.0.0"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "4f19cb1459ec1b1befb3405631a900e11052a244b4259cbf9df35a641cbdff9e"
+  inputs-digest = "07af098ee47f5618a9af3753c78be146cdfe8aab4a945cfe30ed2e65fedb9744"
   solver-name = "gps-cdcl"
   solver-version = 1
